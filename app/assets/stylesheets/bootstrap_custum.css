@@ -2,9 +2,9 @@
   margin-top: 50px;
 }
 
-.panel-heading{
+.panel-default.panel-heading{
   text-align: center;
-  background-color: #555;
+  background-color: #999;
 }
 
 .panel-body{
