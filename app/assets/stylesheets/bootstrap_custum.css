@@ -2,11 +2,16 @@
   margin-top: 50px;
 }
 
+.panel-heading{
+  text-align: center;
+  background-color: #555;
+}
+
 .panel-body{
   width: 90%;
 }
 .table{
-  width: 50%;
+  width: 30%;
   margin: 0 auto;
   margin-bottom: 80px
 }
