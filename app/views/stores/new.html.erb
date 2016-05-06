@@ -1,14 +1,19 @@
-
+<div class="container">
 <%= form_tag('/stores', method: :post) do %>
   <h3>書店情報の作成</h3>
   <input placeholder="書店名" type="text" name="name">
+  <input placeholder="住所" type="text" name="address">
   <input placeholder="駅名" type="text" name="station">
   <input placeholder="駅からの距離" type="text" name="distance">
   <input placeholder="電話番号" type="text" name="phone_number">
   <input placeholder="開店時間（10:00:00)" type="text" name="open">
   <input placeholder="閉店時間(23:00:00)" type="text" name="close">
+  <input placeholder="画像URL" type="text" name="image">
+  <input placeholder="ホームページURL" type="text" name="siteaddress">
+  <textarea placeholder="コメント" type="text" name="text"></textarea>
   <input type="submit" value="SENT">
 <% end %>
+  </div>
 
 
 
