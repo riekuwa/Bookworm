@@ -1,6 +1,6 @@
 class StoresController < ApplicationController
   def index
-    @store = Store.find(1)
+    @stores = Store.all
   end
 
 end

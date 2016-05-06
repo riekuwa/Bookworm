@@ -1,29 +1,47 @@
-  <div class="panel panel-default">
+   <div class="container">
+   <% @stores.each do |store| %>
+   <div class="panel panel-default">
   <!-- Default panel contents -->
-  <div class="panel-heading"><h2><%= @store.name %></h2></div>
-  <div class="panel-body">
-    <p><%= @store.text %></p>
-  </div>
+      <div class="panel-heading"><h2><%= store.name %></h2></div>
+      <div><h3>広さ</h3>
+        <span class="rating-star"><i class="star-actived rate-<%= store.breadth %>0"></i></span>
+      </div>
+      <div><h3>混雑度</h3>
+        <span class="rating-star"><i class="star-actived rate-<%= store.congestion %>0"></i></span>
+      </div>
+      <div class="panel-body">
+        <p><%= simple_format(store.text) %></p>
+      </div>
+
+        <table class= "table">
+          <tr>
+            <th>住所</th>
+            <td><%= store.address %></td>
+          </tr>
+          <tr>
+            <th>営業時間</th>
+            <td><%= store.open.strftime('%H:%M') %>〜<%= store.close.strftime('%H:%M') %></td>
+          </tr>
+          <tr>
+            <th>最寄り駅</th>
+            <td><%= store.station %><br><%= store.distance %></td>
+          </tr>
+          <tr>
+            <th>電話番号</th>
+            <td><%= store.phone_number %></td>
+          </tr>
+          <tr>
+            <th>サイト</th>
+            <td><a href= "<%= store.siteaddress %>"><%= store.siteaddress %></a></td>
+          </tr>
+          <tr>
+            <th>取り扱いジャンル</th>
+            <td><%= store.genre %></td>
+          </tr>
+        </table>
+   </div><!-- panel panel-default -->
+    <% end %>
+  </div><!-- container -->
 
 
-<!-- 
-  <h1><%= @store.name %></h1>
-  <p><%= @store.text %></p> -->
-  <div class="table-format">
-  <table class= "table">
-    <tr><th>住所</th>
-      <td><%= @store.address %></td></tr>
-    <tr><th>営業時間</th>
-      <td><%= @store.open.strftime('%H:%M') %>〜<%= @store.close.strftime('%H:%M') %></td></tr>
-    <tr><th>最寄り駅</th>
-      <td><%= @store.station %><br><%= @store.distance %></td></tr>
-    <tr><th>電話番号</th>
-      <td><%= @store.phone_number %></td></tr>
-    <tr><th>サイト</th>
-      <td><a href= "<%= @store.siteaddress %>"><%= @store.siteaddress %></a></td></tr>
-    <tr><th>取り扱いジャンル</th>
-      <td><%= @store.genre %></td></tr>
-  </table>
-  </div>
-  </div>
 

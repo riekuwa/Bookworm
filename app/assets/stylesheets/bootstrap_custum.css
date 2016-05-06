@@ -1,0 +1,12 @@
+.panel.panel-default{
+  margin-top: 50px;
+}
+
+.panel-body{
+  width: 90%;
+}
+.table{
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 80px
+}
